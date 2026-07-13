@@ -7,12 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (menuToggle && mobileNav) {
         menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
+            const isActive = menuToggle.classList.toggle('active');
             mobileNav.classList.toggle('active');
             
-            // Toggle hamburger animation
             const spans = menuToggle.querySelectorAll('span');
-            if (menuToggle.classList.contains('active')) {
+            if (isActive) {
                 spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
                 spans[1].style.opacity = '0';
                 spans[2].style.transform = 'rotate(-45deg) translate(6px, -7px)';
@@ -23,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Close menu when clicking a link
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 menuToggle.classList.remove('active');
@@ -54,12 +52,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Helper to toggle active card and set value
     const setupSelector = (options, callback) => {
         options.forEach(card => {
             card.addEventListener('click', () => {
                 options.forEach(c => c.classList.remove('active'));
                 card.classList.add('active');
+
+                // Small haptic-like scale animation
+                card.style.transform = 'scale(0.97)';
+                setTimeout(() => { card.style.transform = ''; }, 150);
+
                 const val = card.getAttribute('data-value');
                 callback(val);
                 updateSummary();
@@ -100,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const targetPosition = targetEl.getBoundingClientRect().top + window.scrollY;
                 
                 window.scrollTo({
-                    top: targetPosition - headerHeight,
+                    top: targetPosition - headerHeight - 10,
                     behavior: 'smooth'
                 });
             }
@@ -118,24 +120,97 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.08,
+            rootMargin: '0px 0px -40px 0px'
         });
 
         revealElements.forEach(el => revealObserver.observe(el));
     }
 
-    // --- Header shrink/shadow on scroll ---
-    const header = document.querySelector('.header');
+    // --- Header scroll effects ---
+    const header = document.getElementById('mainHeader');
     if (header) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 80) {
-                header.style.boxShadow = '0 4px 20px rgba(54, 34, 28, 0.06)';
-                header.style.backgroundColor = 'rgba(255, 253, 249, 0.96)';
+        let lastScrollY = 0;
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+            
+            if (scrollY > 60) {
+                header.classList.add('scrolled');
             } else {
-                header.style.boxShadow = 'none';
-                header.style.backgroundColor = 'rgba(255, 253, 249, 0.85)';
+                header.classList.remove('scrolled');
             }
-        }, { passive: true });
+            
+            lastScrollY = scrollY;
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll(); // Run once on load
+    }
+
+    // --- Animated Counter for Stats ---
+    const animateCounters = () => {
+        const statNums = document.querySelectorAll('.stat-num[data-count]');
+        
+        statNums.forEach(stat => {
+            const target = parseInt(stat.getAttribute('data-count'));
+            if (isNaN(target)) return;
+
+            const duration = 2000;
+            const startTime = performance.now();
+
+            const easeOutQuart = (t) => 1 - Math.pow(1 - t, 4);
+
+            const updateCounter = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const easedProgress = easeOutQuart(progress);
+                const current = Math.round(easedProgress * target);
+                
+                stat.textContent = current + '+';
+                
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                }
+            };
+
+            requestAnimationFrame(updateCounter);
+        });
+    };
+
+    // Trigger counter animation when stats bar is visible
+    const statsBar = document.querySelector('.stats-bar');
+    if (statsBar) {
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        statsObserver.observe(statsBar);
+    }
+
+    // --- Parallax-like subtle hero scroll effect ---
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        const decos = hero.querySelectorAll('.hero-deco');
+        
+        const handleHeroScroll = () => {
+            const scrollY = window.scrollY;
+            const heroHeight = hero.offsetHeight;
+            
+            if (scrollY < heroHeight) {
+                const progress = scrollY / heroHeight;
+                
+                decos.forEach((deco, i) => {
+                    const speed = (i + 1) * 0.3;
+                    deco.style.transform = `translateY(${scrollY * speed}px)`;
+                });
+            }
+        };
+
+        window.addEventListener('scroll', handleHeroScroll, { passive: true });
     }
 });

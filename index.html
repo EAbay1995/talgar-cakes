@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232c1b18'/><text x='18' y='72' font-size='55' fill='%23d4af37' font-family='Georgia, serif' font-weight='bold'>OC</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231a0f0c'/><text x='18' y='72' font-size='55' fill='%23c9a84c' font-family='Georgia, serif' font-weight='bold'>OC</text></svg>">
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
@@ -30,10 +30,10 @@
 <body>
 
     <!-- Header / Navbar -->
-    <header class="header">
+    <header class="header" id="mainHeader">
         <div class="container header-container">
             <a href="#" class="logo">
-                <span class="logo-accent">ORAZGUL</span> CAKES
+                <span class="logo-accent">ORAZGUL</span>&nbsp;CAKES
             </a>
             
             <nav class="nav">
@@ -82,11 +82,14 @@
 
         <!-- Hero Section -->
         <section class="hero">
-            <div class="hero-overlay"></div>
+            <!-- Decorative elements -->
+            <div class="hero-deco hero-deco-1"></div>
+            <div class="hero-deco hero-deco-2"></div>
+
             <div class="container hero-container">
                 <div class="hero-content">
-                    <span class="badge">Премиум торты от Оразгүл</span>
-                    <h1 class="hero-title">Изысканные торты ручной работы на заказ в Талгаре</h1>
+                    <span class="badge"><i class="fa-solid fa-gem"></i> Премиум торты от Оразгүл</span>
+                    <h1 class="hero-title">Изысканные торты <span class="accent-word">ручной работы</span> на заказ в Талгаре</h1>
                     <p class="hero-description">
                         Создаю незабываемые десерты для ваших самых счастливых моментов. 100% натуральные ингредиенты, уникальный авторский дизайн и бережная доставка по Талгару и Алматинской области.
                     </p>
@@ -100,17 +103,17 @@
                         </a>
                     </div>
 
-                    <div class="hero-features">
-                        <div class="hero-feat-item">
-                            <i class="fa-solid fa-leaf"></i>
+                    <div class="hero-trust">
+                        <div class="trust-item">
+                            <div class="trust-icon"><i class="fa-solid fa-leaf"></i></div>
                             <span>100% Натурально</span>
                         </div>
-                        <div class="hero-feat-item">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <div class="trust-item">
+                            <div class="trust-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
                             <span>Индивидуальный дизайн</span>
                         </div>
-                        <div class="hero-feat-item">
-                            <i class="fa-solid fa-truck"></i>
+                        <div class="trust-item">
+                            <div class="trust-icon"><i class="fa-solid fa-truck"></i></div>
                             <span>Бережная доставка</span>
                         </div>
                     </div>
@@ -119,9 +122,9 @@
         </section>
 
         <!-- Stats / Highlights -->
-        <div class="stats-bar">
+        <div class="stats-bar" data-reveal>
             <div class="stat-item">
-                <span class="stat-num">500+</span>
+                <span class="stat-num" data-count="500">0</span>
                 <span class="stat-label">Счастливых праздников</span>
             </div>
             <div class="stat-item">
@@ -130,7 +133,7 @@
             </div>
             <div class="stat-item">
                 <span class="stat-num">0%</span>
-                <span class="stat-label">Искусственных красителей и химии</span>
+                <span class="stat-label">Искусственных красителей</span>
             </div>
             <div class="stat-item">
                 <span class="stat-num">15 мин</span>
@@ -142,13 +145,15 @@
         <section id="benefits" class="section benefits" data-reveal>
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Секрет вкуса наших десертов</h2>
+                    <span class="section-eyebrow">Почему выбирают нас</span>
+                    <h2 class="section-title">Секрет вкуса наших <em>десертов</em></h2>
+                    <div class="section-ornament"><i class="fa-solid fa-diamond"></i></div>
                     <p class="section-subtitle">Каждый торт создается вручную с заботой о здоровье ваших близких</p>
                 </div>
 
-                <div class="grid grid-3">
+                <div class="benefits-grid">
                     <!-- Benefit 1 -->
-                    <div class="card benefit-card">
+                    <div class="benefit-card">
                         <div class="benefit-icon">
                             <i class="fa-solid fa-wheat-awn"></i>
                         </div>
@@ -159,7 +164,7 @@
                     </div>
 
                     <!-- Benefit 2 -->
-                    <div class="card benefit-card">
+                    <div class="benefit-card">
                         <div class="benefit-icon">
                             <i class="fa-solid fa-palette"></i>
                         </div>
@@ -170,7 +175,7 @@
                     </div>
 
                     <!-- Benefit 3 -->
-                    <div class="card benefit-card">
+                    <div class="benefit-card">
                         <div class="benefit-icon">
                             <i class="fa-solid fa-truck-ramp-box"></i>
                         </div>
@@ -187,11 +192,13 @@
         <section id="catalog" class="section catalog-section" data-reveal>
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Каталог наших кондитерских изделий</h2>
+                    <span class="section-eyebrow">Наши кондитерские изделия</span>
+                    <h2 class="section-title">Каталог <em>авторских</em> десертов</h2>
+                    <div class="section-ornament"><i class="fa-solid fa-diamond"></i></div>
                     <p class="section-subtitle">Выберите идеальный формат десерта для вашего незабываемого события</p>
                 </div>
 
-                <div class="grid grid-2 catalog-grid">
+                <div class="catalog-grid">
                     <!-- Wedding Cake -->
                     <div class="catalog-card">
                         <div class="catalog-img-wrapper">
@@ -204,7 +211,7 @@
                                 Роскошные многоярусные торты, которые станут триумфальным завершением вашего торжества. Элегантное оформление, надежная внутренняя конструкция и гармоничное сочетание вкусов.
                             </p>
                             <a href="https://wa.me/77071591799?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9E%D1%80%D0%B0%D0%B7%D0%B3%D1%83%D0%BB%D1%8C!%20%D0%AF%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%A1%D0%B2%D0%B0%D0%B4%D0%B5%D0%B1%D0%BD%D0%BE%D0%B3%D0%BE%20%D1%82%D0%BE%D1%80%D1%82%D0%B0..." target="_blank" class="btn btn-primary btn-block">
-                                <i class="fa-solid fa-envelope"></i> Заказать свадебный торт
+                                <i class="fa-brands fa-whatsapp"></i> Заказать свадебный торт
                             </a>
                         </div>
                     </div>
@@ -221,7 +228,7 @@
                                 Яркие, сказочные торты на дни рождения, юбилеи, годовасики и девичники. Фигурки любимых персонажей, воздушные безе на палочках, леденцы, пряники и индивидуальный подход.
                             </p>
                             <a href="https://wa.me/77071591799?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9E%D1%80%D0%B0%D0%B7%D0%B3%D1%83%D0%BB%D1%8C!%20%D0%AF%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%BF%D1%80%D0%B0%D1%81%D0%B7%D0%B4%D0%BD%D0%B8%D1%87%D0%BD%D0%BE%D0%B3%D0%BE/%D0%B4%D0%B5%D1%82%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20%D1%82%D0%BE%D1%80%D1%82%D0%B0..." target="_blank" class="btn btn-primary btn-block">
-                                <i class="fa-solid fa-envelope"></i> Заказать праздничный торт
+                                <i class="fa-brands fa-whatsapp"></i> Заказать праздничный торт
                             </a>
                         </div>
                     </div>
@@ -238,7 +245,7 @@
                                 Маленькие тортики весом 400-500 грамм в экологичной ланч-коробочке со свечкой и ложкой. Идеальный подарок-открытка, чтобы порадовать любимого человека, коллегу или друга без повода.
                             </p>
                             <a href="https://wa.me/77071591799?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9E%D1%80%D0%B0%D0%B7%D0%B3%D1%83%D0%BB%D1%8C!%20%D0%AF%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D0%91%D0%B5%D0%BD%D1%82%D0%BE-%D1%82%D0%BE%D1%80%D1%82." target="_blank" class="btn btn-primary btn-block">
-                                <i class="fa-solid fa-envelope"></i> Заказать Бенто-торт
+                                <i class="fa-brands fa-whatsapp"></i> Заказать Бенто-торт
                             </a>
                         </div>
                     </div>
@@ -255,7 +262,7 @@
                                 Порционные десерты в стаканчиках (трайфлы) или нежнейшие кексы со сливочной шапочкой и жидким центром (капкейки). Идеально подходят для фуршетов, офисных чаепитий и детских праздников.
                             </p>
                             <a href="https://wa.me/77071591799?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9E%D1%80%D0%B0%D0%B7%D0%B3%D1%83%D0%BB%D1%8C!%20%D0%AF%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D0%BA%D0%B0%D0%BF%D0%BA%D0%B5%D0%B9%D0%BA%D0%B8%20%D0%B8%D0%BB%D0%B8%20%D0%BD%D0%B0%D0%B1%D0%BE%D1%80%20%D0%B4%D0%B5%D1%81%D0%B5%D1%80%D1%82%D0%BE%D0%B2." target="_blank" class="btn btn-primary btn-block">
-                                <i class="fa-solid fa-envelope"></i> Заказать набор десертов
+                                <i class="fa-brands fa-whatsapp"></i> Заказать набор десертов
                             </a>
                         </div>
                     </div>
@@ -267,14 +274,16 @@
         <section id="constructor" class="section constructor-section" data-reveal>
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Интерактивный конструктор вкусов</h2>
+                    <span class="section-eyebrow">Собери свой вкус</span>
+                    <h2 class="section-title">Интерактивный конструктор <em>вкусов</em></h2>
+                    <div class="section-ornament"><i class="fa-solid fa-diamond"></i></div>
                     <p class="section-subtitle">Соберите свой идеальный торт по вкусу прямо сейчас</p>
                 </div>
 
                 <div class="constructor-wrapper">
                     <!-- Biscuit Selector -->
                     <div class="constructor-step">
-                        <span class="step-badge">Шаг 1</span>
+                        <span class="step-badge"><i class="fa-solid fa-1"></i> Шаг 1</span>
                         <h3>Выберите основу (бисквит)</h3>
                         <div class="selector-options" id="biscuitOptions">
                             <div class="selector-card active" data-value="Классический ванильный">
@@ -294,7 +303,7 @@
 
                     <!-- Cream Selector -->
                     <div class="constructor-step">
-                        <span class="step-badge">Шаг 2</span>
+                        <span class="step-badge"><i class="fa-solid fa-2"></i> Шаг 2</span>
                         <h3>Выберите нежный крем</h3>
                         <div class="selector-options" id="creamOptions">
                             <div class="selector-card active" data-value="Крем-чиз на сливках">
@@ -314,7 +323,7 @@
 
                     <!-- Filling Selector -->
                     <div class="constructor-step">
-                        <span class="step-badge">Шаг 3</span>
+                        <span class="step-badge"><i class="fa-solid fa-3"></i> Шаг 3</span>
                         <h3>Добавьте вкусную начинку</h3>
                         <div class="selector-options" id="fillingOptions">
                             <div class="selector-card active" data-value="Свежая клубника">
@@ -346,10 +355,12 @@
         </section>
 
         <!-- Order Process -->
-        <section class="section order-section">
+        <section class="section order-section" data-reveal>
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Как заказать торт?</h2>
+                    <span class="section-eyebrow">Как это работает</span>
+                    <h2 class="section-title">Как заказать <em>торт</em>?</h2>
+                    <div class="section-ornament"><i class="fa-solid fa-diamond"></i></div>
                     <p class="section-subtitle">Простые шаги от вашей идеи до восхитительного праздничного чаепития</p>
                 </div>
 
@@ -382,13 +393,15 @@
         <section id="reviews" class="section reviews-section" data-reveal>
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Отзывы счастливых гостей</h2>
+                    <span class="section-eyebrow">Слова благодарности</span>
+                    <h2 class="section-title">Отзывы <em>счастливых</em> гостей</h2>
+                    <div class="section-ornament"><i class="fa-solid fa-diamond"></i></div>
                     <p class="section-subtitle">Слова благодарности от тех, кто доверил нам сладкую часть своих праздников</p>
                 </div>
 
-                <div class="grid grid-3 reviews-grid">
+                <div class="reviews-grid">
                     <!-- Review 1 -->
-                    <div class="card review-card">
+                    <div class="review-card">
                         <div class="review-header">
                             <div class="stars">
                                 <i class="fa-solid fa-star"></i>
@@ -406,7 +419,7 @@
                     </div>
 
                     <!-- Review 2 -->
-                    <div class="card review-card">
+                    <div class="review-card">
                         <div class="review-header">
                             <div class="stars">
                                 <i class="fa-solid fa-star"></i>
@@ -424,7 +437,7 @@
                     </div>
 
                     <!-- Review 3 -->
-                    <div class="card review-card">
+                    <div class="review-card">
                         <div class="review-header">
                             <div class="stars">
                                 <i class="fa-solid fa-star"></i>
@@ -448,7 +461,9 @@
         <section id="contacts" class="section contacts-section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Контакты и заказ</h2>
+                    <span class="section-eyebrow">Связаться с нами</span>
+                    <h2 class="section-title">Контакты и <em>заказ</em></h2>
+                    <div class="section-ornament"><i class="fa-solid fa-diamond"></i></div>
                     <p class="section-subtitle">Свяжитесь с нами, чтобы обсудить ваш будущий шедевр</p>
                 </div>
 
@@ -524,7 +539,7 @@
         <div class="container footer-container">
             <div class="footer-brand">
                 <a href="#" class="logo">
-                    <span class="logo-accent">ORAZGUL</span> CAKES
+                    <span class="logo-accent">ORAZGUL</span>&nbsp;CAKES
                 </a>
                 <p>Домашние торты премиум класса на заказ в Талгаре. Изысканный вкус, натуральный состав без консервантов и оригинальное праздничное оформление.</p>
             </div>
@@ -552,7 +567,7 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp conversion button for mobile -->
+    <!-- Floating WhatsApp conversion button -->
     <a href="https://wa.me/77071591799?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9E%D1%80%D0%B0%D0%B7%D0%B3%D1%83%D0%BB%D1%8C!%20%D0%AF%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D1%82%D0%BE%D1%80%D1%82%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%B0%D0%B7%D0%B4%D0%BD%D0%B8%D0%BA." target="_blank" class="float-wa-btn" aria-label="Заказать в WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
         <span class="float-wa-label">Заказать торт</span>
