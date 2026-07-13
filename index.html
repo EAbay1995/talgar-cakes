@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Заказ эксклюзивных домашних тортов ручной работы в Талгаре от кондитера Оразгүл. Свадебные, детские, праздничные и бенто-торты только из натуральных ингредиентов.">
+    <meta name="keywords" content="торты на заказ Талгар, заказать торт Талгар, бенто торт Талгар, кондитерская Талгар, домашние торты Талгар, свадебный торт Талгар">
+    <title>Торты на Заказ в Талгаре | Домашняя Кондитерская Оразгүл</title>
+    
+    <!-- Open Graph tags for WhatsApp and Social Sharing -->
+    <meta property="og:title" content="Эксклюзивные Торты на Заказ в Талгаре | Оразгүл Cakes">
+    <meta property="og:description" content="Подарите праздник себе и близким! Только натуральные ингредиенты. Оценка стоимости и подбор начинки за 15 минут.">
+    <meta property="og:image" content="assets/hero.png">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232c1b18'/><text x='18' y='72' font-size='55' fill='%23d4af37' font-family='Georgia, serif' font-weight='bold'>OC</text></svg>">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">ORAZGUL</span> CAKES
+            </a>
+            
+            <nav class="nav">
+                <a href="#catalog" class="nav-link">Каталог</a>
+                <a href="#benefits" class="nav-link">О нас</a>
+                <a href="#constructor" class="nav-link">Выбрать вкус</a>
+                <a href="#reviews" class="nav-link">Отзывы</a>
+                <a href="#contacts" class="nav-link">Контакты</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:+77071591799" class="phone-link">
+                    <i class="fa-solid fa-phone"></i> +7 (707) 159 17 99
+                </a>
+                <a href="https://wa.me/77071591799?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9E%D1%80%D0%B0%D0%B7%D0%B3%D1%83%D0%BB%D1%8C!%20%D0%AF%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D1%82%D0%BE%D1%80%D1%82." target="_blank" class="btn btn-wa-header">
+                    <i class="fa-brands fa-whatsapp"></i> Обсудить дизайн
+                </a>
+                <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#catalog" class="mobile-nav-link">Каталог</a>
+        <a href="#benefits" class="mobile-nav-link">О нас</a>
+        <a href="#constructor" class="mobile-nav-link">Выбрать вкус</a>
+        <a href="#reviews" class="mobile-nav-link">Отзывы</a>
+        <a href="#contacts" class="mobile-nav-link">Контакты</a>
+        <div class="mobile-nav-contacts">
+            <a href="tel:+77071591799" class="phone-link-mobile">
+                <i class="fa-solid fa-phone"></i> +7 (707) 159 17 99
+            </a>
+            <a href="https://wa.me/77071591799?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9E%D1%80%D0%B0%D0%B7%D0%B3%D1%83%D0%BB%D1%8C!%20%D0%AF%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D1%82%D0%BE%D1%80%D1%82." target="_blank" class="btn btn-wa btn-block">
+                <i class="fa-brands fa-whatsapp"></i> Написать в WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge">Премиум торты от Оразгүл</span>
+                    <h1 class="hero-title">Изысканные торты ручной работы на заказ в Талгаре</h1>
+                    <p class="hero-description">
+                        Создаю незабываемые десерты для ваших самых счастливых моментов. 100% натуральные ингредиенты, уникальный авторский дизайн и бережная доставка по Талгару и Алматинской области.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#catalog" class="btn btn-primary btn-lg btn-glow">
+                            <i class="fa-solid fa-cake-candles"></i> Посмотреть каталог
+                        </a>
+                        <a href="https://wa.me/77071591799?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9E%D1%80%D0%B0%D0%B7%D0%B3%D1%83%D0%BB%D1%8C!%20%D0%AF%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D1%82%D0%BE%D1%80%D1%82%D0%B0%20%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7..." target="_blank" class="btn btn-secondary btn-lg">
+                            <i class="fa-brands fa-whatsapp"></i> Быстрый заказ по фото
+                        </a>
+                    </div>
+
+                    <div class="hero-features">
+                        <div class="hero-feat-item">
+                            <i class="fa-solid fa-leaf"></i>
+                            <span>100% Натурально</span>
+                        </div>
+                        <div class="hero-feat-item">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            <span>Индивидуальный дизайн</span>
+                        </div>
+                        <div class="hero-feat-item">
+                            <i class="fa-solid fa-truck"></i>
+                            <span>Бережная доставка</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats / Highlights -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-num">500+</span>
+                <span class="stat-label">Счастливых праздников</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Натуральные фермерские продукты</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">0%</span>
+                <span class="stat-label">Искусственных красителей и химии</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">15 мин</span>
+                <span class="stat-label">Расчет стоимости заказа</span>
+            </div>
+        </div>
+
+        <!-- Benefits Section -->
+        <section id="benefits" class="section benefits" data-reveal>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Секрет вкуса наших десертов</h2>
+                    <p class="section-subtitle">Каждый торт создается вручную с заботой о здоровье ваших близких</p>
+                </div>
+
+                <div class="grid grid-3">
+                    <!-- Benefit 1 -->
+                    <div class="card benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-wheat-awn"></i>
+                        </div>
+                        <h3 class="benefit-title">Честный состав</h3>
+                        <p class="benefit-desc">
+                            Никаких дешевых заменителей, маргарина или растительных сливок. Только натуральное сливочное масло 82.5%, качественный бельгийский шоколад, настоящие сыры маскарпоне и крем-чиз.
+                        </p>
+                    </div>
+
+                    <!-- Benefit 2 -->
+                    <div class="card benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <h3 class="benefit-title">Декор любой сложности</h3>
+                        <p class="benefit-desc">
+                            Воплотим в жизнь любую художественную задумку: от современных шоколадных шаров и рисовых парусов до милых мастичных фигурок ручной лепки, изомальтовых кристаллов и живых цветов.
+                        </p>
+                    </div>
+
+                    <!-- Benefit 3 -->
+                    <div class="card benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-truck-ramp-box"></i>
+                        </div>
+                        <h3 class="benefit-title">Безопасная доставка</h3>
+                        <p class="benefit-desc">
+                            Везем ваши заказы в специальных кондитерских коробках на пониженной скорости, чтобы декор и форма торта приехали к вашему праздничному столу в идеальном первозданном виде.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catalog Section -->
+        <section id="catalog" class="section catalog-section" data-reveal>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Каталог наших кондитерских изделий</h2>
+                    <p class="section-subtitle">Выберите идеальный формат десерта для вашего незабываемого события</p>
+                </div>
+
+                <div class="grid grid-2 catalog-grid">
+                    <!-- Wedding Cake -->
+                    <div class="catalog-card">
+                        <div class="catalog-img-wrapper">
+                            <img src="assets/wedding_cake.png" alt="Свадебные торты в Талгаре" class="catalog-img">
+                            <span class="catalog-price">от 8 000 ₸/кг</span>
+                        </div>
+                        <div class="catalog-info">
+                            <h3 class="catalog-card-title">Свадебные торты</h3>
+                            <p class="catalog-card-desc">
+                                Роскошные многоярусные торты, которые станут триумфальным завершением вашего торжества. Элегантное оформление, надежная внутренняя конструкция и гармоничное сочетание вкусов.
+                            </p>
+                            <a href="https://wa.me/77071591799?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9E%D1%80%D0%B0%D0%B7%D0%B3%D1%83%D0%BB%D1%8C!%20%D0%AF%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%A1%D0%B2%D0%B0%D0%B4%D0%B5%D0%B1%D0%BD%D0%BE%D0%B3%D0%BE%20%D1%82%D0%BE%D1%80%D1%82%D0%B0..." target="_blank" class="btn btn-primary btn-block">
+                                <i class="fa-solid fa-envelope"></i> Заказать свадебный торт
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Celebration & Kid Cake -->
+                    <div class="catalog-card">
+                        <div class="catalog-img-wrapper">
+                            <img src="assets/child_cake.png" alt="Праздничные и детские торты в Талгаре" class="catalog-img">
+                            <span class="catalog-price">от 7 500 ₸/кг</span>
+                        </div>
+                        <div class="catalog-info">
+                            <h3 class="catalog-card-title">Детские и праздничные торты</h3>
+                            <p class="catalog-card-desc">
+                                Яркие, сказочные торты на дни рождения, юбилеи, годовасики и девичники. Фигурки любимых персонажей, воздушные безе на палочках, леденцы, пряники и индивидуальный подход.
+                            </p>
+                            <a href="https://wa.me/77071591799?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9E%D1%80%D0%B0%D0%B7%D0%B3%D1%83%D0%BB%D1%8C!%20%D0%AF%20%D1%85%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%BF%D1%80%D0%B0%D1%81%D0%B7%D0%B4%D0%BD%D0%B8%D1%87%D0%BD%D0%BE%D0%B3%D0%BE/%D0%B4%D0%B5%D1%82%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20%D1%82%D0%BE%D1%80%D1%82%D0%B0..." target="_blank" class="btn btn-primary btn-block">
+                                <i class="fa-solid fa-envelope"></i> Заказать праздничный торт
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Bento Cake -->
+                    <div class="catalog-card">
+                        <div class="catalog-img-wrapper">
+                            <img src="assets/bento_cake.png" alt="Бенто торты в Талгаре" class="catalog-img">
+                            <span class="catalog-price">от 5 000 ₸/шт</span>
+                        </div>
+                        <div class="catalog-info">
+                            <h3 class="catalog-card-title">Трендовые Бенто-торты</h3>
+                            <p class="catalog-card-desc">
+                                Маленькие тортики весом 400-500 грамм в экологичной ланч-коробочке со свечкой и ложкой. Идеальный подарок-открытка, чтобы порадовать любимого человека, коллегу или друга без повода.
+                            </p>
+                            <a href="https://wa.me/77071591799?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9E%D1%80%D0%B0%D0%B7%D0%B3%D1%83%D0%BB%D1%8C!%20%D0%AF%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D0%91%D0%B5%D0%BD%D1%82%D0%BE-%D1%82%D0%BE%D1%80%D1%82." target="_blank" class="btn btn-primary btn-block">
+                                <i class="fa-solid fa-envelope"></i> Заказать Бенто-торт
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Cupcakes & Candy Bar -->
+                    <div class="catalog-card">
+                        <div class="catalog-img-wrapper">
+                            <img src="assets/cupcakes.png" alt="Капкейки и кэнди бар в Талгаре" class="catalog-img">
+                            <span class="catalog-price">от 900 ₸/шт</span>
+                        </div>
+                        <div class="catalog-info">
+                            <h3 class="catalog-card-title">Капкейки и Трайфлы</h3>
+                            <p class="catalog-card-desc">
+                                Порционные десерты в стаканчиках (трайфлы) или нежнейшие кексы со сливочной шапочкой и жидким центром (капкейки). Идеально подходят для фуршетов, офисных чаепитий и детских праздников.
+                            </p>
+                            <a href="https://wa.me/77071591799?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9E%D1%80%D0%B0%D0%B7%D0%B3%D1%83%D0%BB%D1%8C!%20%D0%AF%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D0%BA%D0%B0%D0%BF%D0%BA%D0%B5%D0%B9%D0%BA%D0%B8%20%D0%B8%D0%BB%D0%B8%20%D0%BD%D0%B0%D0%B1%D0%BE%D1%80%20%D0%B4%D0%B5%D1%81%D0%B5%D1%80%D1%82%D0%BE%D0%B2." target="_blank" class="btn btn-primary btn-block">
+                                <i class="fa-solid fa-envelope"></i> Заказать набор десертов
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Flavor Constructor Section -->
+        <section id="constructor" class="section constructor-section" data-reveal>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Интерактивный конструктор вкусов</h2>
+                    <p class="section-subtitle">Соберите свой идеальный торт по вкусу прямо сейчас</p>
+                </div>
+
+                <div class="constructor-wrapper">
+                    <!-- Biscuit Selector -->
+                    <div class="constructor-step">
+                        <span class="step-badge">Шаг 1</span>
+                        <h3>Выберите основу (бисквит)</h3>
+                        <div class="selector-options" id="biscuitOptions">
+                            <div class="selector-card active" data-value="Классический ванильный">
+                                <h4>Ванильный шифон</h4>
+                                <p>Нежный, воздушный классический бисквит на основе натурального молока.</p>
+                            </div>
+                            <div class="selector-card" data-value="Насыщенный шоколадный">
+                                <h4>Шоколадный Прага</h4>
+                                <p>Насыщенные сочные коржи с добавлением натурального темного какао.</p>
+                            </div>
+                            <div class="selector-card" data-value="Красный бархат">
+                                <h4>Красный бархат</h4>
+                                <p>Бархатистый бисквит с легким шоколадным послевкусием и ярким цветом.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cream Selector -->
+                    <div class="constructor-step">
+                        <span class="step-badge">Шаг 2</span>
+                        <h3>Выберите нежный крем</h3>
+                        <div class="selector-options" id="creamOptions">
+                            <div class="selector-card active" data-value="Крем-чиз на сливках">
+                                <h4>Нежный крем-чиз</h4>
+                                <p>Классический крем на основе сливочного творожного сыра и свежих сливок.</p>
+                            </div>
+                            <div class="selector-card" data-value="Заварной карамельный">
+                                <h4>Заварной карамельный</h4>
+                                <p>Густой, ароматный крем с добавлением домашней вареной карамели.</p>
+                            </div>
+                            <div class="selector-card" data-value="Шоколадный ганаш">
+                                <h4>Шоколадный ганаш</h4>
+                                <p>Изысканный, плотный крем из премиального бельгийского шоколада.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Filling Selector -->
+                    <div class="constructor-step">
+                        <span class="step-badge">Шаг 3</span>
+                        <h3>Добавьте вкусную начинку</h3>
+                        <div class="selector-options" id="fillingOptions">
+                            <div class="selector-card active" data-value="Свежая клубника">
+                                <h4>Клубничный конфитюр</h4>
+                                <p>Кисло-сладкая ароматная начинка из натуральной спелой клубники.</p>
+                            </div>
+                            <div class="selector-card" data-value="Вишневый конфитюр">
+                                <h4>Вишневый соус</h4>
+                                <p>Пикантная начинка со спелой вишней, создающая контраст сладости.</p>
+                            </div>
+                            <div class="selector-card" data-value="Домашняя карамель и арахис (Сникерс)">
+                                <h4>Карамель и арахис</h4>
+                                <p>Насыщенная домашняя карамель с обжаренным хрустящим арахисом.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Send Order Action -->
+                    <div class="constructor-footer">
+                        <div class="selection-summary">
+                            <p>Ваша комбинация: <strong id="summaryText">Ванильный шифон + Нежный крем-чиз + Клубничный конфитюр</strong></p>
+                        </div>
+                        <button class="btn btn-primary btn-lg" id="btnSendConstructor">
+                            <i class="fa-brands fa-whatsapp"></i> Отправить сборку Оразгүл в WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Process -->
+        <section class="section order-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Как заказать торт?</h2>
+                    <p class="section-subtitle">Простые шаги от вашей идеи до восхитительного праздничного чаепития</p>
+                </div>
+
+                <div class="order-steps-grid">
+                    <div class="order-step-item">
+                        <div class="order-step-num">1</div>
+                        <h3>Обсуждение</h3>
+                        <p>Напишите в WhatsApp, отправьте фото дизайна, который вам нравится, выберите вкус и вес (от 1.5-2 кг).</p>
+                    </div>
+                    <div class="order-step-item">
+                        <div class="order-step-num">2</div>
+                        <h3>Предоплата</h3>
+                        <p>После согласования дизайна и цены вносится предоплата 50% на Kaspi. Это бронирует вашу дату в календаре.</p>
+                    </div>
+                    <div class="order-step-item">
+                        <div class="order-step-num">3</div>
+                        <h3>Приготовление</h3>
+                        <p>Мы выпекаем коржи и собираем торт строго накануне события, чтобы к вам он приехал абсолютно свежим.</p>
+                    </div>
+                    <div class="order-step-item">
+                        <div class="order-step-num">4</div>
+                        <h3>Получение</h3>
+                        <p>Заберите торт самостоятельно в Талгаре или мы отправим его с аккуратным водителем прямо к вашему столу.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="section reviews-section" data-reveal>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Отзывы счастливых гостей</h2>
+                    <p class="section-subtitle">Слова благодарности от тех, кто доверил нам сладкую часть своих праздников</p>
+                </div>
+
+                <div class="grid grid-3 reviews-grid">
+                    <!-- Review 1 -->
+                    <div class="card review-card">
+                        <div class="review-header">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="review-date">Свадьба</span>
+                        </div>
+                        <p class="review-text">
+                            «Оразгуль, огромное спасибо за наш свадебный торт! Он превзошел все ожидания! Три яруса, каждый со своей начинкой, гости были просто в восторге, съели абсолютно всё до последнего кусочка. Декор с живыми цветами выглядел роскошно!»
+                        </p>
+                        <h4 class="review-author">Мадина, г. Талгар</h4>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="card review-card">
+                        <div class="review-header">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="review-date">День рождения</span>
+                        </div>
+                        <p class="review-text">
+                            «Заказывали сыну торт с фигурками динозавров. Малыш был счастлив! Фигурки сделаны идеально, прямо как настоящие игрушки. А внутри была начинка с карамелью и арахисом — безумно вкусная, не приторная, чувствуется, что продукты качественные.»
+                        </p>
+                        <h4 class="review-author">Айнур, г. Талгар</h4>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="card review-card">
+                        <div class="review-header">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="review-date">Подарок</span>
+                        </div>
+                        <p class="review-text">
+                            «Бенто-тортики от Оразгуль — это просто любовь! Заказываю уже третий раз на небольшие семейные праздники и подругам в подарок. Всегда милые надписи, очень аккуратно упаковано в коробочку, а вкус Молочная девочка просто тает во рту!»
+                        </p>
+                        <h4 class="review-author">Камила, г. Талгар</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacts Section -->
+        <section id="contacts" class="section contacts-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Контакты и заказ</h2>
+                    <p class="section-subtitle">Свяжитесь с нами, чтобы обсудить ваш будущий шедевр</p>
+                </div>
+
+                <div class="contacts-grid">
+                    <div class="contact-info-card">
+                        <h3>Кондитер Оразгүл</h3>
+                        <p class="contact-sub">Принимаем заказы ежедневно с 09:00 до 21:00. Желательно делать заказ за 3-5 дней до вашей даты.</p>
+                        
+                        <div class="contact-details-list">
+                            <div class="contact-detail-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div>
+                                    <h4>Адрес производства</h4>
+                                    <p>Казахстан, Алматинская обл., г. Талгар (уточняйте точный адрес при самовывозе)</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <div>
+                                    <h4>Телефон для звонков</h4>
+                                    <p><a href="tel:+77071591799">+7 (707) 159 17 99</a></p>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <div>
+                                    <h4>WhatsApp для связи</h4>
+                                    <p><a href="https://wa.me/77071591799" target="_blank">+7 (707) 159 17 99</a></p>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <i class="fa-solid fa-truck"></i>
+                                <div>
+                                    <h4>Зона доставки</h4>
+                                    <p>Талгар, пригородные поселки, а также бережная отправка Яндекс Такси в г. Алматы</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-actions">
+                            <a href="https://wa.me/77071591799?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9E%D1%80%D0%B0%D0%B7%D0%B3%D1%83%D0%BB%D1%8C!%20%D0%AF%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D1%82%D0%BE%D1%80%D1%82%20%D0%B8%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%B4%D0%B5%D0%BA%D0%BE%D1%80." target="_blank" class="btn btn-wa-large btn-block">
+                                <i class="fa-brands fa-whatsapp"></i> Написать Оразгүл в WhatsApp
+                            </a>
+                            <a href="tel:+77071591799" class="btn btn-secondary btn-block">
+                                <i class="fa-solid fa-phone"></i> Позвонить кондитеру
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Stylized Map Placeholder -->
+                    <div class="map-container">
+                        <div class="map-mockup">
+                            <div class="map-bg"></div>
+                            <div class="map-overlay-card">
+                                <i class="fa-solid fa-cake-candles animate-pulse"></i>
+                                <h4>Готовим в Талгаре</h4>
+                                <p>Вы можете забрать готовый заказ самостоятельно или заказать бережную доставку до вашего дома.</p>
+                                <a href="https://yandex.kz/maps/?q=%D0%A2%D0%B0%D0%BB%D0%B3%D0%B0%D1%80" target="_blank" class="btn btn-primary btn-sm">Открыть карту</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-accent">ORAZGUL</span> CAKES
+                </a>
+                <p>Домашние торты премиум класса на заказ в Талгаре. Изысканный вкус, натуральный состав без консервантов и оригинальное праздничное оформление.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Навигация</h4>
+                <a href="#catalog">Каталог тортов</a>
+                <a href="#benefits">Почему мы</a>
+                <a href="#constructor">Конструктор начинок</a>
+                <a href="#reviews">Отзывы клиентов</a>
+            </div>
+
+            <div class="footer-contacts-info">
+                <h4>Контакты</h4>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:+77071591799">+7 (707) 159 17 99</a></p>
+                <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/77071591799" target="_blank">Написать в WhatsApp</a></p>
+                <p><i class="fa-solid fa-location-dot"></i> Казахстан, Алматинская обл., г. Талгар</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 ORAZGUL CAKES Талгар. Все права защищены.</p>
+                <p>Создание изысканных десертов ручной работы.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp conversion button for mobile -->
+    <a href="https://wa.me/77071591799?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9E%D1%80%D0%B0%D0%B7%D0%B3%D1%83%D0%BB%D1%8C!%20%D0%AF%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D1%82%D0%BE%D1%80%D1%82%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%B0%D0%B7%D0%B4%D0%BD%D0%B8%D0%BA." target="_blank" class="float-wa-btn" aria-label="Заказать в WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="float-wa-label">Заказать торт</span>
+    </a>
+
+    <!-- JS script -->
+    <script src="script.js"></script>
+</body>
+</html>
