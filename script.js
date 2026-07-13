@@ -1,5 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- Theme Toggle (System Preference + Manual) ---
+    const themeToggle = document.getElementById('themeToggle');
+    const htmlEl = document.documentElement;
+    const THEME_KEY = 'orazgul-theme';
+
+    // Determine initial theme: localStorage > system preference
+    const getSystemTheme = () => 
+        window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+    const savedTheme = localStorage.getItem(THEME_KEY);
+    const initialTheme = savedTheme || getSystemTheme();
+    htmlEl.setAttribute('data-theme', initialTheme);
+
+    // Toggle handler
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            // Add transition class for smooth color change
+            document.body.classList.add('theme-transitioning');
+
+            const current = htmlEl.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            
+            htmlEl.setAttribute('data-theme', next);
+            localStorage.setItem(THEME_KEY, next);
+
+            // Remove transition class after animation completes
+            setTimeout(() => {
+                document.body.classList.remove('theme-transitioning');
+            }, 450);
+        });
+    }
+
+    // Listen for system theme changes (if user hasn't manually overridden)
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem(THEME_KEY)) {
+            document.body.classList.add('theme-transitioning');
+            htmlEl.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+            setTimeout(() => document.body.classList.remove('theme-transitioning'), 450);
+        }
+    });
+
     // --- Mobile Menu Toggle ---
     const menuToggle = document.getElementById('menuToggle');
     const mobileNav = document.getElementById('mobileNav');
